@@ -43,7 +43,7 @@ async function checkHealth() {
     const data = await resp.json();
     if (data.ollama) {
       badge.className = 'mode-badge';
-      text.textContent = `Mistral Active — ${data.candidates_loaded} candidates`;
+      text.textContent = `Groq Active — ${data.candidates_loaded} candidates`;
     } else {
       badge.className = 'mode-badge fallback';
       text.textContent = `Fallback Mode — ${data.candidates_loaded} candidates`;
@@ -220,7 +220,7 @@ function renderResults(data) {
     <span class="meta-chip">⏱ ${data.elapsed_seconds}s</span>
     <span class="meta-chip">👥 ${data.total_candidates} total</span>
     <span class="meta-chip">🎯 ${data.shortlisted} shortlisted</span>
-    <span class="meta-chip">${data.mode === 'llm' ? '🟢 Mistral' : '🟡 Fallback'}</span>
+    <span class="meta-chip">${data.mode === 'llm' ? '🟢 Groq' : '🟡 Fallback'}</span>
   `;
 
   // Candidate cards
