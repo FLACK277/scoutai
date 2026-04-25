@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ScoutAI — Agentic Hybrid-RAG Recruitment Engine powered by Mistral AI">
+  <title>ScoutAI — AI Recruitment Engine</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ═══ Header ═══ -->
+    <header class="header" id="header">
+      <h1 class="header-logo">Scout<span>AI</span></h1>
+      <p class="header-subtitle">Agentic Hybrid-RAG Recruitment Engine</p>
+      <div class="mode-badge" id="modeBadge">
+        <span class="dot"></span>
+        <span id="modeText">Checking...</span>
+      </div>
+    </header>
+
+    <!-- ═══ JD Input ═══ -->
+    <section class="jd-section glass-card" id="jdSection">
+      <div class="section-title">
+        <div class="icon">📋</div>
+        Job Description
+      </div>
+      <textarea
+        class="jd-textarea"
+        id="jdInput"
+        placeholder="Paste a job description here, or click 'Load Sample JD' to try a demo..."
+        spellcheck="false"
+      ></textarea>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btnRunPipeline" onclick="runPipeline()">
+          🚀 Run Full Pipeline
+        </button>
+        <button class="btn btn-secondary" id="btnSampleJD" onclick="loadSampleJD()">
+          📄 Load Sample JD
+        </button>
+        <button class="btn btn-ghost" id="btnClear" onclick="clearAll()">
+          Clear
+        </button>
+      </div>
+      <div class="toggle-row">
+        <label class="toggle-switch">
+          <input type="checkbox" id="anonymizeToggle">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Anonymize candidates (hide names during scoring)</span>
+      </div>
+    </section>
+
+    <!-- ═══ Parsed JD Display ═══ -->
+    <section class="parsed-jd glass-card" id="parsedJdSection">
+      <div class="section-title">
+        <div class="icon">🎯</div>
+        Parsed Requirements
+      </div>
+      <div id="parsedJdContent"></div>
+    </section>
+
+    <!-- ═══ Pipeline Progress ═══ -->
+    <section class="pipeline-progress" id="pipelineProgress">
+      <div class="glass-card">
+        <div class="progress-steps" id="progressSteps">
+          <div class="progress-step" data-step="1"></div>
+          <div class="progress-step" data-step="2"></div>
+          <div class="progress-step" data-step="3"></div>
+          <div class="progress-step" data-step="4"></div>
+          <div class="progress-step" data-step="5"></div>
+          <div class="progress-step" data-step="6"></div>
+        </div>
+        <div class="progress-label">
+          <div class="spinner"></div>
+          <span id="progressText">Initializing pipeline...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Results ═══ -->
+    <section class="results-section" id="resultsSection">
+      <div class="results-header">
+        <div class="section-title">
+          <div class="icon">🏆</div>
+          Ranked Candidates
+        </div>
+        <div class="results-meta" id="resultsMeta"></div>
+      </div>
+      <div class="candidate-cards" id="candidateCards"></div>
+    </section>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+      <div class="bias-note">
+        ⚠️ AI-generated scores are for screening assistance only. All rankings should be reviewed by a human recruiter before making hiring decisions. This tool does not discriminate based on age, gender, ethnicity, or any protected characteristic.
+      </div>
+      <p>ScoutAI v1.0 — Built with FastAPI, FAISS, sentence-transformers & Ollama Mistral</p>
+    </footer>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

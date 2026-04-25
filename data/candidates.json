@@ -1,0 +1,363 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Sharma",
+    "skills": ["Python", "FastAPI", "PostgreSQL", "Docker", "Redis", "AWS", "REST APIs"],
+    "experience_years": 5,
+    "current_company": "Flipkart",
+    "joined_current_job": "2023-03-15",
+    "work_experience": [
+      {"company": "Flipkart", "role": "Senior Backend Engineer", "duration": "2023-present"},
+      {"company": "Zomato", "role": "Backend Developer", "duration": "2020-2023"},
+      {"company": "TCS", "role": "Software Engineer", "duration": "2018-2020"}
+    ],
+    "projects": ["Built real-time order tracking microservice handling 10K+ RPS", "Designed caching layer reducing DB load by 60%"],
+    "raw_resume_text": "Aarav Sharma — Senior Backend Engineer at Flipkart with 5 years of experience. Expert in Python, FastAPI, PostgreSQL, Docker, Redis, and AWS. Built real-time order tracking microservice handling 10K+ RPS at Flipkart. Designed caching layer with Redis reducing DB load by 60%. Previously at Zomato building REST APIs for restaurant management. Started career at TCS working on enterprise Java systems before transitioning to Python."
+  },
+  {
+    "id": 2,
+    "name": "Priya Patel",
+    "skills": ["React", "TypeScript", "Next.js", "GraphQL", "Tailwind CSS", "Node.js", "Jest"],
+    "experience_years": 4,
+    "current_company": "Razorpay",
+    "joined_current_job": "2024-01-10",
+    "work_experience": [
+      {"company": "Razorpay", "role": "Frontend Engineer", "duration": "2024-present"},
+      {"company": "Swiggy", "role": "UI Developer", "duration": "2021-2023"},
+      {"company": "Infosys", "role": "Associate Developer", "duration": "2020-2021"}
+    ],
+    "projects": ["Rebuilt Razorpay merchant dashboard with React+Next.js", "Created design system used by 5 product teams at Swiggy"],
+    "raw_resume_text": "Priya Patel — Frontend Engineer at Razorpay with 4 years of experience. Proficient in React, TypeScript, Next.js, GraphQL, Tailwind CSS, Node.js, and Jest. Rebuilt the Razorpay merchant dashboard using React and Next.js, improving load times by 40%. Created a shared design system at Swiggy adopted by 5 product teams. Strong focus on accessibility and performance optimization."
+  },
+  {
+    "id": 3,
+    "name": "Rohan Gupta",
+    "skills": ["Python", "TensorFlow", "PyTorch", "NLP", "Computer Vision", "scikit-learn", "MLflow"],
+    "experience_years": 6,
+    "current_company": "Microsoft",
+    "joined_current_job": "2021-06-01",
+    "work_experience": [
+      {"company": "Microsoft", "role": "ML Engineer II", "duration": "2021-present"},
+      {"company": "Ola", "role": "Data Scientist", "duration": "2019-2021"},
+      {"company": "Mu Sigma", "role": "Analyst", "duration": "2018-2019"}
+    ],
+    "projects": ["Built NLP pipeline for Azure document intelligence", "Developed demand prediction model reducing surge pricing errors by 35%"],
+    "raw_resume_text": "Rohan Gupta — ML Engineer II at Microsoft with 6 years of experience in Machine Learning. Expert in Python, TensorFlow, PyTorch, NLP, Computer Vision, scikit-learn, and MLflow. Built NLP pipeline for Azure document intelligence processing 1M+ docs daily. At Ola, developed demand prediction model that reduced surge pricing errors by 35%. Published research on transformer architectures for low-resource Indian languages."
+  },
+  {
+    "id": 4,
+    "name": "Sneha Reddy",
+    "skills": ["Java", "Spring Boot", "Kubernetes", "Kafka", "Microservices", "Oracle", "CI/CD"],
+    "experience_years": 8,
+    "current_company": "Goldman Sachs",
+    "joined_current_job": "2020-09-01",
+    "work_experience": [
+      {"company": "Goldman Sachs", "role": "VP Engineering", "duration": "2020-present"},
+      {"company": "JPMorgan", "role": "Senior Developer", "duration": "2017-2020"},
+      {"company": "Wipro", "role": "Software Engineer", "duration": "2015-2017"}
+    ],
+    "projects": ["Architected trade settlement platform processing $2B daily", "Led migration of 15 monolithic services to Kubernetes"],
+    "raw_resume_text": "Sneha Reddy — VP Engineering at Goldman Sachs with 8 years of experience. Expert in Java, Spring Boot, Kubernetes, Kafka, Microservices, Oracle, and CI/CD pipelines. Architected the trade settlement platform processing $2B in daily transactions. Led the migration of 15 monolithic services to Kubernetes, reducing deployment time by 70%. Strong background in financial services technology."
+  },
+  {
+    "id": 5,
+    "name": "Vikram Singh",
+    "skills": ["Python", "Django", "React", "PostgreSQL", "Docker", "AWS", "Celery"],
+    "experience_years": 4,
+    "current_company": "Zerodha",
+    "joined_current_job": "2022-11-01",
+    "work_experience": [
+      {"company": "Zerodha", "role": "Full-Stack Developer", "duration": "2022-present"},
+      {"company": "Freshworks", "role": "Software Developer", "duration": "2020-2022"}
+    ],
+    "projects": ["Built real-time portfolio analytics dashboard", "Developed customer support chatbot handling 5K queries/day"],
+    "raw_resume_text": "Vikram Singh — Full-Stack Developer at Zerodha with 4 years of experience. Skilled in Python, Django, React, PostgreSQL, Docker, AWS, and Celery. Built real-time portfolio analytics dashboard used by 100K+ traders. At Freshworks, developed customer support chatbot handling 5K queries per day using NLP. Passionate about fintech and building reliable, scalable systems."
+  },
+  {
+    "id": 6,
+    "name": "Ananya Iyer",
+    "skills": ["Python", "FastAPI", "MongoDB", "React", "Docker", "GCP", "Redis"],
+    "experience_years": 3,
+    "current_company": "Meesho",
+    "joined_current_job": "2024-06-15",
+    "work_experience": [
+      {"company": "Meesho", "role": "Backend Developer", "duration": "2024-present"},
+      {"company": "PhonePe", "role": "Junior Developer", "duration": "2022-2024"}
+    ],
+    "projects": ["Built product recommendation engine for Meesho", "Designed payment reconciliation system at PhonePe"],
+    "raw_resume_text": "Ananya Iyer — Backend Developer at Meesho with 3 years of experience. Proficient in Python, FastAPI, MongoDB, React, Docker, GCP, and Redis. Built product recommendation engine serving 2M+ users at Meesho. At PhonePe, designed payment reconciliation system handling 500K daily transactions. Quick learner with strong fundamentals in distributed systems."
+  },
+  {
+    "id": 7,
+    "name": "Karthik Nair",
+    "skills": ["Go", "Kubernetes", "Terraform", "AWS", "Docker", "Prometheus", "Linux"],
+    "experience_years": 7,
+    "current_company": "Atlassian",
+    "joined_current_job": "2019-04-01",
+    "work_experience": [
+      {"company": "Atlassian", "role": "Senior DevOps Engineer", "duration": "2019-present"},
+      {"company": "ThoughtWorks", "role": "DevOps Consultant", "duration": "2017-2019"},
+      {"company": "HCL", "role": "Systems Engineer", "duration": "2016-2017"}
+    ],
+    "projects": ["Built self-healing Kubernetes infrastructure for Jira Cloud", "Designed CI/CD pipeline reducing deployment frequency from weekly to 50x/day"],
+    "raw_resume_text": "Karthik Nair — Senior DevOps Engineer at Atlassian with 7 years of experience. Expert in Go, Kubernetes, Terraform, AWS, Docker, Prometheus, and Linux. Built self-healing Kubernetes infrastructure for Jira Cloud supporting 10M+ users. Designed CI/CD pipeline that increased deployment frequency from weekly to 50 times per day at ThoughtWorks. Deep expertise in infrastructure automation and observability."
+  },
+  {
+    "id": 8,
+    "name": "Meera Joshi",
+    "skills": ["Python", "PyTorch", "Hugging Face", "NLP", "LLMs", "RAG", "FAISS"],
+    "experience_years": 3,
+    "current_company": "Fractal Analytics",
+    "joined_current_job": "2023-08-01",
+    "work_experience": [
+      {"company": "Fractal Analytics", "role": "AI Engineer", "duration": "2023-present"},
+      {"company": "Tiger Analytics", "role": "ML Engineer", "duration": "2021-2023"}
+    ],
+    "projects": ["Built enterprise RAG system for legal document Q&A", "Fine-tuned LLaMA model for domain-specific text generation"],
+    "raw_resume_text": "Meera Joshi — AI Engineer at Fractal Analytics with 3 years of experience. Expert in Python, PyTorch, Hugging Face, NLP, LLMs, RAG, and FAISS. Built enterprise RAG system for legal document Q&A achieving 92% accuracy. Fine-tuned LLaMA model for domain-specific text generation. At Tiger Analytics, developed sentiment analysis pipeline processing 1M+ social media posts. Active contributor to open-source NLP projects."
+  },
+  {
+    "id": 9,
+    "name": "Arjun Mehta",
+    "skills": ["React", "Vue.js", "JavaScript", "CSS", "Figma", "Storybook", "WebGL"],
+    "experience_years": 5,
+    "current_company": "Dream11",
+    "joined_current_job": "2022-02-01",
+    "work_experience": [
+      {"company": "Dream11", "role": "Lead Frontend Engineer", "duration": "2022-present"},
+      {"company": "BookMyShow", "role": "Frontend Developer", "duration": "2019-2022"}
+    ],
+    "projects": ["Redesigned Dream11 fantasy sports UI increasing engagement by 25%", "Built interactive seating chart with WebGL for BookMyShow"],
+    "raw_resume_text": "Arjun Mehta — Lead Frontend Engineer at Dream11 with 5 years of experience. Skilled in React, Vue.js, JavaScript, CSS, Figma, Storybook, and WebGL. Redesigned Dream11 fantasy sports UI resulting in 25% increase in user engagement. At BookMyShow, built interactive seating chart using WebGL for immersive ticket booking. Strong eye for design and performance-first development philosophy."
+  },
+  {
+    "id": 10,
+    "name": "Divya Krishnan",
+    "skills": ["Python", "Apache Spark", "Airflow", "SQL", "dbt", "Snowflake", "Kafka"],
+    "experience_years": 5,
+    "current_company": "Walmart Labs",
+    "joined_current_job": "2021-10-01",
+    "work_experience": [
+      {"company": "Walmart Labs", "role": "Senior Data Engineer", "duration": "2021-present"},
+      {"company": "Myntra", "role": "Data Engineer", "duration": "2019-2021"},
+      {"company": "Cognizant", "role": "ETL Developer", "duration": "2018-2019"}
+    ],
+    "projects": ["Built real-time inventory pipeline processing 50M events/day", "Designed data lakehouse architecture for Myntra analytics"],
+    "raw_resume_text": "Divya Krishnan — Senior Data Engineer at Walmart Labs with 5 years of experience. Expert in Python, Apache Spark, Airflow, SQL, dbt, Snowflake, and Kafka. Built real-time inventory pipeline processing 50M events per day at Walmart. Designed data lakehouse architecture for Myntra analytics enabling self-service BI. Strong background in building reliable, scalable data infrastructure."
+  },
+  {
+    "id": 11,
+    "name": "Rahul Desai",
+    "skills": ["Python", "FastAPI", "React", "MongoDB", "Docker", "AWS", "Elasticsearch"],
+    "experience_years": 4,
+    "current_company": "Cred",
+    "joined_current_job": "2023-05-01",
+    "work_experience": [
+      {"company": "Cred", "role": "Software Engineer", "duration": "2023-present"},
+      {"company": "BrowserStack", "role": "Backend Developer", "duration": "2021-2023"},
+      {"company": "LTI", "role": "Associate Engineer", "duration": "2020-2021"}
+    ],
+    "projects": ["Built credit score analysis microservice at Cred", "Developed distributed test execution engine at BrowserStack"],
+    "raw_resume_text": "Rahul Desai — Software Engineer at Cred with 4 years of experience. Proficient in Python, FastAPI, React, MongoDB, Docker, AWS, and Elasticsearch. Built credit score analysis microservice serving 5M+ users at Cred. At BrowserStack, developed distributed test execution engine reducing test suite runtime by 40%. Experienced in building both consumer-facing and developer tools."
+  },
+  {
+    "id": 12,
+    "name": "Ishita Banerjee",
+    "skills": ["Java", "Spring Boot", "Angular", "MySQL", "Jenkins", "Microservices", "RabbitMQ"],
+    "experience_years": 6,
+    "current_company": "PayPal",
+    "joined_current_job": "2020-03-01",
+    "work_experience": [
+      {"company": "PayPal", "role": "Staff Engineer", "duration": "2020-present"},
+      {"company": "Paytm", "role": "Senior Developer", "duration": "2018-2020"},
+      {"company": "Capgemini", "role": "Developer", "duration": "2017-2018"}
+    ],
+    "projects": ["Designed fraud detection rules engine at PayPal", "Built UPI payment gateway handling 1M txns/day at Paytm"],
+    "raw_resume_text": "Ishita Banerjee — Staff Engineer at PayPal with 6 years of experience. Expert in Java, Spring Boot, Angular, MySQL, Jenkins, Microservices, and RabbitMQ. Designed fraud detection rules engine that blocked $50M+ in fraudulent transactions annually at PayPal. Built UPI payment gateway handling 1M transactions per day at Paytm. Deep expertise in payment systems and financial security."
+  },
+  {
+    "id": 13,
+    "name": "Aditya Kumar",
+    "skills": ["Python", "Django", "PostgreSQL", "Celery", "Redis", "Docker", "Linux"],
+    "experience_years": 3,
+    "current_company": "Groww",
+    "joined_current_job": "2024-02-01",
+    "work_experience": [
+      {"company": "Groww", "role": "Backend Developer", "duration": "2024-present"},
+      {"company": "upGrad", "role": "Software Developer", "duration": "2022-2024"}
+    ],
+    "projects": ["Built mutual fund SIP automation system at Groww", "Developed course recommendation engine at upGrad"],
+    "raw_resume_text": "Aditya Kumar — Backend Developer at Groww with 3 years of experience. Skilled in Python, Django, PostgreSQL, Celery, Redis, Docker, and Linux. Built mutual fund SIP automation system processing 100K+ orders daily at Groww. At upGrad, developed course recommendation engine that improved learner retention by 20%. Strong fundamentals in system design and backend architecture."
+  },
+  {
+    "id": 14,
+    "name": "Neha Agarwal",
+    "skills": ["React", "TypeScript", "Next.js", "Node.js", "MongoDB", "AWS", "GraphQL"],
+    "experience_years": 5,
+    "current_company": "Lenskart",
+    "joined_current_job": "2021-07-01",
+    "work_experience": [
+      {"company": "Lenskart", "role": "Senior Full-Stack Developer", "duration": "2021-present"},
+      {"company": "OYO", "role": "Full-Stack Developer", "duration": "2019-2021"}
+    ],
+    "projects": ["Built virtual try-on feature using AR at Lenskart", "Designed dynamic pricing engine at OYO"],
+    "raw_resume_text": "Neha Agarwal — Senior Full-Stack Developer at Lenskart with 5 years of experience. Proficient in React, TypeScript, Next.js, Node.js, MongoDB, AWS, and GraphQL. Built virtual try-on feature using AR technology at Lenskart, increasing conversion by 30%. Designed dynamic pricing engine at OYO optimizing room rates across 10K+ properties. Comfortable working across the full stack with a focus on user experience."
+  },
+  {
+    "id": 15,
+    "name": "Saurabh Tiwari",
+    "skills": ["Python", "TensorFlow", "Computer Vision", "OpenCV", "C++", "CUDA", "Edge AI"],
+    "experience_years": 4,
+    "current_company": "Qualcomm",
+    "joined_current_job": "2022-06-01",
+    "work_experience": [
+      {"company": "Qualcomm", "role": "ML Engineer", "duration": "2022-present"},
+      {"company": "Samsung R&D", "role": "Research Engineer", "duration": "2020-2022"}
+    ],
+    "projects": ["Optimized on-device object detection achieving 30fps on Snapdragon", "Built face recognition system with 99.2% accuracy at Samsung"],
+    "raw_resume_text": "Saurabh Tiwari — ML Engineer at Qualcomm with 4 years of experience. Expert in Python, TensorFlow, Computer Vision, OpenCV, C++, CUDA, and Edge AI. Optimized on-device object detection model achieving 30fps on Snapdragon chipsets. At Samsung R&D, built face recognition system with 99.2% accuracy for Galaxy devices. Specialized in deploying ML models on edge devices with strict latency constraints."
+  },
+  {
+    "id": 16,
+    "name": "Pooja Saxena",
+    "skills": ["Python", "Flask", "React", "PostgreSQL", "Docker", "GCP", "REST APIs"],
+    "experience_years": 3,
+    "current_company": "Dunzo",
+    "joined_current_job": "2023-11-01",
+    "work_experience": [
+      {"company": "Dunzo", "role": "Software Engineer", "duration": "2023-present"},
+      {"company": "Cleartrip", "role": "Junior Developer", "duration": "2021-2023"}
+    ],
+    "projects": ["Built real-time rider tracking system at Dunzo", "Developed flight search optimization reducing latency by 50%"],
+    "raw_resume_text": "Pooja Saxena — Software Engineer at Dunzo with 3 years of experience. Proficient in Python, Flask, React, PostgreSQL, Docker, GCP, and REST APIs. Built real-time rider tracking system serving 500K+ daily orders at Dunzo. At Cleartrip, developed flight search optimization that reduced API response latency by 50%. Thrives in fast-paced startup environments with a focus on shipping quality code quickly."
+  },
+  {
+    "id": 17,
+    "name": "Manish Verma",
+    "skills": ["Go", "Python", "gRPC", "Kubernetes", "PostgreSQL", "Redis", "Microservices"],
+    "experience_years": 6,
+    "current_company": "Uber",
+    "joined_current_job": "2020-01-15",
+    "work_experience": [
+      {"company": "Uber", "role": "Senior Backend Engineer", "duration": "2020-present"},
+      {"company": "Directi", "role": "Backend Developer", "duration": "2018-2020"},
+      {"company": "Infosys", "role": "Systems Engineer", "duration": "2017-2018"}
+    ],
+    "projects": ["Built real-time pricing service handling 100K+ requests/sec at Uber", "Designed multi-region data replication system"],
+    "raw_resume_text": "Manish Verma — Senior Backend Engineer at Uber with 6 years of experience. Expert in Go, Python, gRPC, Kubernetes, PostgreSQL, Redis, and Microservices. Built real-time pricing service handling 100K+ requests per second at Uber. Designed multi-region data replication system ensuring 99.99% availability. At Directi, built high-performance DNS resolver serving 10M+ queries daily."
+  },
+  {
+    "id": 18,
+    "name": "Ritu Sharma",
+    "skills": ["Python", "scikit-learn", "Pandas", "SQL", "Tableau", "Statistics", "A/B Testing"],
+    "experience_years": 4,
+    "current_company": "Flipkart",
+    "joined_current_job": "2022-08-01",
+    "work_experience": [
+      {"company": "Flipkart", "role": "Data Scientist", "duration": "2022-present"},
+      {"company": "Hotstar", "role": "Analyst", "duration": "2020-2022"}
+    ],
+    "projects": ["Built customer churn prediction model with 87% accuracy at Flipkart", "Designed content recommendation A/B testing framework at Hotstar"],
+    "raw_resume_text": "Ritu Sharma — Data Scientist at Flipkart with 4 years of experience. Skilled in Python, scikit-learn, Pandas, SQL, Tableau, Statistics, and A/B Testing. Built customer churn prediction model with 87% accuracy saving estimated ₹50Cr in revenue at Flipkart. At Hotstar, designed A/B testing framework for content recommendation that improved watch time by 15%. Strong statistical foundations with practical business impact."
+  },
+  {
+    "id": 19,
+    "name": "Deepak Chauhan",
+    "skills": ["React Native", "TypeScript", "Swift", "Kotlin", "Firebase", "Redux", "GraphQL"],
+    "experience_years": 5,
+    "current_company": "PhonePe",
+    "joined_current_job": "2021-05-01",
+    "work_experience": [
+      {"company": "PhonePe", "role": "Senior Mobile Engineer", "duration": "2021-present"},
+      {"company": "Nykaa", "role": "Mobile Developer", "duration": "2019-2021"}
+    ],
+    "projects": ["Built PhonePe's cross-platform payment SDK used by 50+ merchants", "Redesigned Nykaa app achieving 4.7 star rating on Play Store"],
+    "raw_resume_text": "Deepak Chauhan — Senior Mobile Engineer at PhonePe with 5 years of experience. Expert in React Native, TypeScript, Swift, Kotlin, Firebase, Redux, and GraphQL. Built PhonePe's cross-platform payment SDK integrated by 50+ merchant apps. Redesigned Nykaa shopping app achieving 4.7 star rating on Google Play Store. Passionate about creating smooth, native-feel mobile experiences with cross-platform technologies."
+  },
+  {
+    "id": 20,
+    "name": "Kavitha Menon",
+    "skills": ["Python", "FastAPI", "AWS", "Terraform", "Docker", "PostgreSQL", "CI/CD"],
+    "experience_years": 5,
+    "current_company": "Freshworks",
+    "joined_current_job": "2021-09-01",
+    "work_experience": [
+      {"company": "Freshworks", "role": "Platform Engineer", "duration": "2021-present"},
+      {"company": "Zoho", "role": "Backend Developer", "duration": "2019-2021"}
+    ],
+    "projects": ["Built multi-tenant SaaS platform serving 50K+ businesses at Freshworks", "Designed automated infrastructure provisioning system at Zoho"],
+    "raw_resume_text": "Kavitha Menon — Platform Engineer at Freshworks with 5 years of experience. Proficient in Python, FastAPI, AWS, Terraform, Docker, PostgreSQL, and CI/CD. Built multi-tenant SaaS platform serving 50K+ businesses at Freshworks. At Zoho, designed automated infrastructure provisioning system reducing setup time from 2 days to 30 minutes. Strong expertise in platform engineering and developer experience."
+  },
+  {
+    "id": 21,
+    "name": "Nikhil Jain",
+    "skills": ["Rust", "Go", "C++", "Systems Programming", "Linux", "Networking", "Performance"],
+    "experience_years": 7,
+    "current_company": "Google",
+    "joined_current_job": "2019-08-01",
+    "work_experience": [
+      {"company": "Google", "role": "Staff SWE", "duration": "2019-present"},
+      {"company": "Nutanix", "role": "Systems Engineer", "duration": "2017-2019"}
+    ],
+    "projects": ["Optimized storage engine reducing p99 latency by 40% at Google", "Built distributed file system supporting 100TB+ clusters at Nutanix"],
+    "raw_resume_text": "Nikhil Jain — Staff Software Engineer at Google with 7 years of experience. Expert in Rust, Go, C++, Systems Programming, Linux, Networking, and Performance optimization. Optimized storage engine at Google reducing p99 latency by 40%. At Nutanix, built distributed file system supporting 100TB+ clusters. Published papers on memory-safe systems programming. Deep expertise in low-level systems and performance engineering."
+  },
+  {
+    "id": 22,
+    "name": "Shreya Das",
+    "skills": ["Python", "FastAPI", "React", "Docker", "Kubernetes", "PostgreSQL", "Redis"],
+    "experience_years": 4,
+    "current_company": "Swiggy",
+    "joined_current_job": "2023-01-15",
+    "work_experience": [
+      {"company": "Swiggy", "role": "Software Engineer II", "duration": "2023-present"},
+      {"company": "ShareChat", "role": "Backend Developer", "duration": "2021-2023"},
+      {"company": "Accenture", "role": "Analyst", "duration": "2020-2021"}
+    ],
+    "projects": ["Built restaurant onboarding platform at Swiggy", "Developed content moderation pipeline processing 10M+ posts/day at ShareChat"],
+    "raw_resume_text": "Shreya Das — Software Engineer II at Swiggy with 4 years of experience. Skilled in Python, FastAPI, React, Docker, Kubernetes, PostgreSQL, and Redis. Built restaurant onboarding platform streamlining partner acquisition at Swiggy. At ShareChat, developed content moderation pipeline processing 10M+ posts daily using ML classifiers. Comfortable with both backend systems and frontend development."
+  },
+  {
+    "id": 23,
+    "name": "Amit Rao",
+    "skills": ["Python", "Django", "AWS", "Docker", "Celery", "REST APIs", "MySQL"],
+    "experience_years": 3,
+    "current_company": "Urban Company",
+    "joined_current_job": "2024-03-01",
+    "work_experience": [
+      {"company": "Urban Company", "role": "Backend Developer", "duration": "2024-present"},
+      {"company": "Dailyhunt", "role": "Software Developer", "duration": "2022-2024"}
+    ],
+    "projects": ["Built service partner matching algorithm at Urban Company", "Developed personalized news feed engine at Dailyhunt"],
+    "raw_resume_text": "Amit Rao — Backend Developer at Urban Company with 3 years of experience. Proficient in Python, Django, AWS, Docker, Celery, REST APIs, and MySQL. Built service partner matching algorithm improving booking success rate by 25% at Urban Company. At Dailyhunt, developed personalized news feed engine serving 30M+ users. Quick learner who thrives in building consumer-facing products."
+  },
+  {
+    "id": 24,
+    "name": "Tanvi Kulkarni",
+    "skills": ["Python", "PyTorch", "NLP", "Transformers", "BERT", "FastAPI", "Docker"],
+    "experience_years": 4,
+    "current_company": "Sprinklr",
+    "joined_current_job": "2022-04-01",
+    "work_experience": [
+      {"company": "Sprinklr", "role": "NLP Engineer", "duration": "2022-present"},
+      {"company": "Haptik", "role": "ML Engineer", "duration": "2020-2022"}
+    ],
+    "projects": ["Built multi-lingual sentiment analysis model supporting 12 languages", "Designed intent recognition system for conversational AI at Haptik"],
+    "raw_resume_text": "Tanvi Kulkarni — NLP Engineer at Sprinklr with 4 years of experience. Expert in Python, PyTorch, NLP, Transformers, BERT, FastAPI, and Docker. Built multi-lingual sentiment analysis model supporting 12 languages at Sprinklr. At Haptik, designed intent recognition system for conversational AI handling 5M+ queries monthly. Published research on efficient fine-tuning techniques for BERT-based models."
+  },
+  {
+    "id": 25,
+    "name": "Rajesh Pillai",
+    "skills": ["Python", "FastAPI", "React", "PostgreSQL", "Docker", "AWS", "Redis", "Kubernetes"],
+    "experience_years": 6,
+    "current_company": "Intuit",
+    "joined_current_job": "2021-02-01",
+    "work_experience": [
+      {"company": "Intuit", "role": "Staff Engineer", "duration": "2021-present"},
+      {"company": "Cisco", "role": "Senior Developer", "duration": "2018-2021"},
+      {"company": "TCS", "role": "Developer", "duration": "2017-2018"}
+    ],
+    "projects": ["Architected QuickBooks invoice processing system handling 10M+ invoices/month", "Built network analytics platform at Cisco"],
+    "raw_resume_text": "Rajesh Pillai — Staff Engineer at Intuit with 6 years of experience. Expert in Python, FastAPI, React, PostgreSQL, Docker, AWS, Redis, and Kubernetes. Architected QuickBooks invoice processing system handling 10M+ invoices per month. At Cisco, built network analytics platform providing real-time visibility across 50K+ devices. Full-stack expertise with strong emphasis on building scalable, reliable systems."
+  }
+]
