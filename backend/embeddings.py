@@ -1,35 +1,46 @@
 """
 ScoutAI — Embedding & FAISS Index Manager
-Provides sentence-transformer embeddings and FAISS vector similarity search.
+Provides lightweight ONNX embeddings and FAISS vector similarity search.
 """
 
 import logging
 import numpy as np
 import faiss
-from sentence_transformers import SentenceTransformer
-from backend.config import EMBEDDING_MODEL, EMBEDDING_DIM
+from fastembed import TextEmbedding
+from backend.config import EMBEDDING_DIM
 
 logger = logging.getLogger(__name__)
 
 
 class EmbeddingManager:
-    """Manages sentence-transformer model and FAISS index."""
+    """Manages fastembed model and FAISS index."""
 
     def __init__(self):
-        logger.info(f"Loading embedding model: {EMBEDDING_MODEL}...")
-        self.model = SentenceTransformer(EMBEDDING_MODEL)
+        logger.info(f"Loading lightweight embedding model via fastembed...")
+        # fastembed uses ONNX under the hood, requiring no PyTorch (saves >1GB RAM!)
+        self.model = TextEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
         self.index = None
         self._id_map: list[int] = []  # maps FAISS position → candidate index
-        logger.info("✅ Embedding model loaded")
+        logger.info("✅ Lightweight Embedding model loaded")
 
     def encode(self, text: str) -> np.ndarray:
         """Encode a single text to a normalized embedding vector."""
-        vec = self.model.encode([text], normalize_embeddings=True)
-        return vec[0]
+        vecs = list(self.model.embed([text]))
+        vec = vecs[0]
+        # Normalize for Inner Product (Cosine Similarity)
+        norm = np.linalg.norm(vec)
+        if norm > 0:
+            vec = vec / norm
+        return vec
 
     def encode_batch(self, texts: list[str]) -> np.ndarray:
         """Encode a batch of texts to normalized embedding vectors."""
-        return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+        vecs = list(self.model.embed(texts))
+        arr = np.array(vecs)
+        # Normalize for Inner Product
+        norms = np.linalg.norm(arr, axis=1, keepdims=True)
+        arr = np.divide(arr, norms, out=np.zeros_like(arr), where=norms!=0)
+        return arr
 
     def build_index(self, embeddings: np.ndarray, ids: list[int] | None = None):
         """
