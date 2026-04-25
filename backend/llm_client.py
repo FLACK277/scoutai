@@ -1,80 +1,80 @@
 """
-ScoutAI — Ollama Mistral LLM Client
-Wraps Ollama's REST API with automatic fallback for when Ollama is unavailable.
+ScoutAI — Groq Cloud LLM Client
+Wraps Groq's fast inference API for Mixtral.
 """
 
 import httpx
 import json
 import logging
 from backend.config import (
-    OLLAMA_BASE_URL, OLLAMA_MODEL,
-    OLLAMA_TIMEOUT, OLLAMA_TEMPERATURE, OLLAMA_NUM_CTX
+    GROQ_API_KEY, GROQ_MODEL,
+    LLM_TIMEOUT, LLM_TEMPERATURE
 )
 
 logger = logging.getLogger(__name__)
 
 
-class OllamaClient:
-    """Wrapper for Ollama's local REST API using Mistral 7B."""
+class GroqClient:
+    """Wrapper for Groq's REST API using Mixtral."""
 
     def __init__(self):
-        self.base_url = OLLAMA_BASE_URL
-        self.model = OLLAMA_MODEL
-        self.available = self._check_availability()
+        self.base_url = "https://api.groq.com/openai/v1/chat/completions"
+        self.model = GROQ_MODEL
+        self.api_key = GROQ_API_KEY
+        self.available = bool(self.api_key)
+        
         if self.available:
-            logger.info(f"✅ Ollama connected — model '{self.model}' ready")
+            logger.info(f"✅ Groq connected — model '{self.model}' ready")
         else:
-            logger.warning("⚠️  Ollama unavailable — running in fallback mode")
-
-    def _check_availability(self) -> bool:
-        """Check if Ollama is running and Mistral is available."""
-        try:
-            resp = httpx.get(f"{self.base_url}/api/tags", timeout=5)
-            models = [m["name"] for m in resp.json().get("models", [])]
-            return any(self.model in m for m in models)
-        except Exception:
-            return False
+            logger.warning("⚠️  Groq API key missing — LLM calls will fail")
 
     def refresh_status(self) -> bool:
-        """Re-check Ollama availability (useful after restart)."""
-        self.available = self._check_availability()
+        """Re-check availability."""
+        self.available = bool(self.api_key)
         return self.available
 
     async def generate(self, prompt: str, system: str = "") -> str:
         """
-        Send prompt to Mistral via Ollama. Returns generated text.
+        Send prompt to Mixtral via Groq. Returns generated text.
         Raises Exception on failure so callers can fall back.
         """
         if not self.available:
-            raise ConnectionError("Ollama is not available")
+            raise ConnectionError("Groq API key is missing. Check .env")
+
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
 
         payload = {
             "model": self.model,
-            "prompt": prompt,
-            "system": system,
+            "messages": messages,
+            "temperature": LLM_TEMPERATURE,
             "stream": False,
-            "options": {
-                "temperature": OLLAMA_TEMPERATURE,
-                "num_ctx": OLLAMA_NUM_CTX,
-            },
         }
 
         try:
-            async with httpx.AsyncClient(timeout=OLLAMA_TIMEOUT) as client:
+            async with httpx.AsyncClient(timeout=LLM_TIMEOUT) as client:
                 resp = await client.post(
-                    f"{self.base_url}/api/generate",
+                    self.base_url,
+                    headers=headers,
                     json=payload,
                 )
                 resp.raise_for_status()
                 result = resp.json()
-                return result.get("response", "")
+                return result["choices"][0]["message"]["content"]
         except Exception as e:
-            logger.error(f"Ollama generate failed: {e}")
+            logger.error(f"Groq generate failed: {e}")
             raise
 
     async def generate_json(self, prompt: str, system: str = "") -> dict:
         """
-        Generate and parse JSON from Mistral.
+        Generate and parse JSON from LLM.
         Attempts to extract valid JSON from the response.
         """
         raw = await self.generate(prompt, system)
@@ -113,4 +113,4 @@ class OllamaClient:
 
 
 # Singleton instance
-llm = OllamaClient()
+llm = GroqClient()

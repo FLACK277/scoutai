@@ -2,12 +2,17 @@
 ScoutAI Configuration — Central configuration for all modules.
 """
 
-# ─── Ollama / Mistral LLM Configuration ────────────────────────────────────────
-OLLAMA_BASE_URL = "http://localhost:11434"
-OLLAMA_MODEL = "mistral"
-OLLAMA_TIMEOUT = 60          # seconds per LLM request
-OLLAMA_TEMPERATURE = 0.3     # low temp for deterministic outputs
-OLLAMA_NUM_CTX = 4096        # context window
+# ─── Environment Setup ─────────────────────────────────────────────────────────
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# ─── Groq / Cloud LLM Configuration ───────────────────────────────────────────
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_MODEL = "mixtral-8x7b-32768"
+LLM_TIMEOUT = 30             # seconds per LLM request
+LLM_TEMPERATURE = 0.3        # low temp for deterministic outputs
 
 # ─── Embedding Configuration ───────────────────────────────────────────────────
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

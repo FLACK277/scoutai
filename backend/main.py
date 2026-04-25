@@ -91,12 +91,12 @@ async def serve_frontend():
 
 @app.get("/health")
 async def health_check():
-    ollama_ok = llm.refresh_status()
+    groq_ok = llm.refresh_status()
     return {
         "server": "ok",
-        "ollama": ollama_ok,
+        "groq": groq_ok,
         "model": llm.model,
-        "mode": "llm" if ollama_ok else "fallback",
+        "mode": "llm" if groq_ok else "fallback",
         "candidates_loaded": len(candidate_db.candidates),
     }
 
