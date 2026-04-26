@@ -1,11 +1,5 @@
-/**
- * ScoutAI — Frontend Application Logic
- * Handles pipeline execution, results rendering, and UI interactions.
- */
+const API = '';  
 
-const API = '';  // Same origin
-
-// ─── Sample JD ───────────────────────────────────────────────────────────────
 const SAMPLE_JD = `Senior Backend Engineer — Fintech Startup (Remote)
 
 We are looking for a Senior Backend Engineer to join our growing fintech team. You'll build scalable microservices powering our payment processing platform.
@@ -26,15 +20,12 @@ Nice to have:
 
 Location: Remote (India)`;
 
-// ─── State ───────────────────────────────────────────────────────────────────
 let currentResults = null;
 
-// ─── Init ────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   checkHealth();
 });
 
-// ─── Health Check ────────────────────────────────────────────────────────────
 async function checkHealth() {
   const badge = document.getElementById('modeBadge');
   const text = document.getElementById('modeText');
@@ -74,14 +65,11 @@ async function checkHealth() {
     apiDetail.textContent = '❌ Cannot connect to backend at localhost:8000';
   }
 }
-
-// ─── Load Sample JD ──────────────────────────────────────────────────────────
 function loadSampleJD() {
   document.getElementById('jdInput').value = SAMPLE_JD;
   document.getElementById('jdInput').focus();
 }
 
-// ─── Clear All ───────────────────────────────────────────────────────────────
 function clearAll() {
   document.getElementById('jdInput').value = '';
   document.getElementById('resultsSection').classList.remove('active');
@@ -90,8 +78,6 @@ function clearAll() {
   document.getElementById('candidateCards').innerHTML = '';
   currentResults = null;
 }
-
-// ─── Run Pipeline ────────────────────────────────────────────────────────────
 async function runPipeline() {
   const jdText = document.getElementById('jdInput').value.trim();
   if (!jdText) {
