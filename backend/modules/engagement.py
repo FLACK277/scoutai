@@ -1,6 +1,6 @@
 """
 ScoutAI — Module 8: Engagement Agent
-Generates personalised outreach and simulates candidate responses via Mistral.
+Generates personalised outreach and simulates candidate responses via Groq/Mixtral.
 """
 
 import logging

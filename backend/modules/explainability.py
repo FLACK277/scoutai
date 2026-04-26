@@ -1,6 +1,6 @@
 """
 ScoutAI — Module 7: Explainability Engine
-Generates per-candidate explanations using Mistral (with deterministic fallback).
+Generates per-candidate explanations using Groq/Mixtral (with deterministic fallback).
 """
 
 import logging
@@ -35,11 +35,11 @@ Candidate Resume:
 async def explain_candidate(candidate: dict, jd_parsed: dict, scores: dict) -> dict:
     """
     Generate an explanation for why a candidate matches (or doesn't match) a JD.
-    Primary: Ollama Mistral. Fallback: deterministic set-intersection.
+    Primary: Groq Mixtral. Fallback: deterministic set-intersection.
     """
     try:
         if llm.available:
-            logger.info(f"Generating explanation for {candidate['name']} via Mistral...")
+            logger.info(f"Generating explanation for {candidate['name']} via Groq/Mixtral...")
             prompt = USER_PROMPT_TEMPLATE.format(
                 role=jd_parsed.get("role", ""),
                 must_have=", ".join(jd_parsed.get("skills_must_have", [])),

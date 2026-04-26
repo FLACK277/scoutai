@@ -1,6 +1,6 @@
 """
 ScoutAI — Module 2: Resume Parser
-Parses raw resume text into structured JSON using Mistral (with regex fallback).
+Parses raw resume text into structured JSON using Groq/Mixtral (with regex fallback).
 """
 
 import re
@@ -30,11 +30,11 @@ Resume:
 async def parse_resume(resume_text: str) -> dict:
     """
     Parse raw resume text into structured data.
-    Primary: Ollama Mistral. Fallback: regex extraction.
+    Primary: Groq Mixtral. Fallback: regex extraction.
     """
     try:
         if llm.available:
-            logger.info("Parsing resume via Mistral...")
+            logger.info("Parsing resume via Groq/Mixtral...")
             result = await llm.generate_json(
                 prompt=USER_PROMPT_TEMPLATE.format(resume_text=resume_text),
                 system=SYSTEM_PROMPT,

@@ -1,22 +1,22 @@
 # ScoutAI — Agentic Hybrid-RAG Recruitment Engine
 
-ScoutAI is an advanced, local-first AI recruitment engine designed to automate the screening and ranking of job applicants. It leverages **FastAPI**, **FAISS**, and **Ollama (Mistral)** to perform hybrid search (semantic + keyword), candidate scoring, and engagement simulation, all while keeping data completely local and secure.
+ScoutAI is an advanced AI recruitment engine designed to automate the screening and ranking of job applicants. It leverages **FastAPI**, **FAISS**, and **Groq (Mixtral)** to perform hybrid search (semantic + keyword), candidate scoring, and engagement simulation, using fast cloud inference.
 
 ## 🌟 Key Features
 
-*   **Job Description Parsing**: Automatically extracts key skills and requirements from unstructured job descriptions using Mistral.
+*   **Job Description Parsing**: Automatically extracts key skills and requirements from unstructured job descriptions using Groq/Mixtral.
 *   **Hybrid-RAG Candidate Retrieval**: Uses FAISS vector search combined with keyword matching to find the most relevant candidates from the database.
 *   **Intelligent Scoring**: Evaluates candidates based on skill overlap, experience level, and semantic fit.
 *   **Agentic Profiling**: Computes the candidate's "propensity to switch" jobs and generates personalized "engagement messages" for recruiters to use.
 *   **Explainable AI**: Provides a transparent, human-readable reason for why each candidate was matched to the role.
 *   **Premium Local UI**: A beautiful, dark-mode glassmorphic frontend built with pure HTML/CSS/JS that interacts directly with the local FastAPI backend.
-*   **100% Local**: No data leaves your machine. Powered by Ollama and Sentence-Transformers.
+*   **Fast Inference**: Powered by Groq Cloud and Sentence-Transformers.
 
 ## 🛠️ Tech Stack
 
 *   **Backend**: Python, FastAPI
 *   **Frontend**: HTML5, Vanilla CSS (Glassmorphism), Vanilla JavaScript
-*   **AI/ML**: Ollama (Mistral 7B), `sentence-transformers` (`all-MiniLM-L6-v2`)
+*   **AI/ML**: Groq API (Mixtral 8x7B), `sentence-transformers` (`all-MiniLM-L6-v2`)
 *   **Vector Database**: FAISS (CPU)
 
 ## 🚀 Getting Started
@@ -24,9 +24,8 @@ ScoutAI is an advanced, local-first AI recruitment engine designed to automate t
 ### Prerequisites
 
 1.  **Python 3.9+** installed.
-2.  **Ollama** installed on your machine.
-    *   Download from [ollama.com](https://ollama.com).
-    *   Pull the Mistral model: `ollama run mistral`
+2.  **Groq API Key**.
+    *   Create a `.env` file in the root directory and add `GROQ_API_KEY=your_key_here`.
 
 ### Installation
 
@@ -52,7 +51,7 @@ ScoutAI is an advanced, local-first AI recruitment engine designed to automate t
 
 ### Running the App
 
-1.  Ensure **Ollama** is running in the background.
+1.  Ensure you have added your **Groq API Key** to the `.env` file.
 2.  Start the **FastAPI** backend:
     ```bash
     uvicorn backend.main:app --reload --port 8000
@@ -67,7 +66,7 @@ scoutai/
 │   ├── modules/              # Core Logic (Parsing, Retrieval, Scoring, etc.)
 │   ├── main.py               # API Endpoints
 │   ├── config.py             # Configuration and Weights
-│   └── llm_client.py         # Ollama API Wrapper
+│   └── llm_client.py         # Groq API Wrapper
 ├── frontend/                 # UI Assets
 │   ├── index.html
 │   ├── style.css

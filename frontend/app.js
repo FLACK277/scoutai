@@ -38,19 +38,40 @@ document.addEventListener('DOMContentLoaded', () => {
 async function checkHealth() {
   const badge = document.getElementById('modeBadge');
   const text = document.getElementById('modeText');
+  const apiDot = document.getElementById('apiDot');
+  const apiLabel = document.getElementById('apiLabel');
+  const apiDetail = document.getElementById('apiDetail');
+  const apiCard = document.getElementById('apiStatusCard');
+
   try {
     const resp = await fetch(`${API}/health`);
     const data = await resp.json();
-    if (data.ollama) {
+
+    if (data.groq) {
       badge.className = 'mode-badge';
       text.textContent = `Groq Active — ${data.candidates_loaded} candidates`;
+
+      apiCard.className = 'api-status-card active';
+      apiDot.className = 'api-dot active';
+      apiLabel.textContent = 'Groq API Key Active';
+      apiDetail.textContent = `✅ LLM-powered pipeline ready · ${data.candidates_loaded} candidates indexed`;
     } else {
       badge.className = 'mode-badge fallback';
       text.textContent = `Fallback Mode — ${data.candidates_loaded} candidates`;
+
+      apiCard.className = 'api-status-card inactive';
+      apiDot.className = 'api-dot inactive';
+      apiLabel.textContent = 'Groq API Key Missing';
+      apiDetail.textContent = '⚠️ Add GROQ_API_KEY to .env file to enable LLM features';
     }
   } catch (e) {
     badge.className = 'mode-badge fallback';
     text.textContent = 'Server Offline';
+
+    apiCard.className = 'api-status-card offline';
+    apiDot.className = 'api-dot offline';
+    apiLabel.textContent = 'Server Unreachable';
+    apiDetail.textContent = '❌ Cannot connect to backend at localhost:8000';
   }
 }
 

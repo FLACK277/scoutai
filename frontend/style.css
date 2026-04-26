@@ -138,6 +138,99 @@ body::after {
   50% { opacity: 0.4; }
 }
 
+/* API Status Card */
+.api-status-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
+  min-width: 280px;
+}
+.api-status-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+.api-status-card.active {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.04);
+}
+.api-status-card.inactive {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.04);
+}
+.api-status-card.offline {
+  border-color: rgba(244, 63, 94, 0.25);
+  background: rgba(244, 63, 94, 0.04);
+}
+
+.api-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.api-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.api-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.api-dot.active {
+  background: var(--accent-emerald);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+  animation: pulse 2s infinite;
+}
+.api-dot.inactive {
+  background: var(--accent-amber);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+  animation: pulse 2.5s infinite;
+}
+.api-dot.offline {
+  background: var(--accent-rose);
+  box-shadow: 0 0 8px rgba(244, 63, 94, 0.4);
+}
+
+.api-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.api-model {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.api-model:empty {
+  display: none;
+}
+
+.api-status-detail {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 /* ─── Glass Card ─────────────────────────────────────────────────────────── */
 .glass-card {
   background: var(--bg-card);

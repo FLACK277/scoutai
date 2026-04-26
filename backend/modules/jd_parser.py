@@ -1,6 +1,6 @@
 """
 ScoutAI — Module 1: Job Description Parser
-Parses raw JD text into structured JSON using Mistral (with regex fallback).
+Parses raw JD text into structured JSON using Groq/Mixtral (with regex fallback).
 """
 
 import re
@@ -50,11 +50,11 @@ JD Text:
 async def parse_jd(jd_text: str) -> dict:
     """
     Parse a raw job description into structured data.
-    Primary: Ollama Mistral. Fallback: regex/keyword extraction.
+    Primary: Groq Mixtral. Fallback: regex/keyword extraction.
     """
     try:
         if llm.available:
-            logger.info("Parsing JD via Mistral...")
+            logger.info("Parsing JD via Groq/Mixtral...")
             result = await llm.generate_json(
                 prompt=USER_PROMPT_TEMPLATE.format(jd_text=jd_text),
                 system=SYSTEM_PROMPT,

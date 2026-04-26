@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
-print("API KEY:", api_key)
+print("API KEY:", "present" if api_key else "missing")
 
 if not api_key:
     print("API KEY missing")
